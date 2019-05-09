@@ -1,0 +1,308 @@
+body {
+    @include typoStyle($robotoFont, 12px);
+
+   
+}
+
+// contact
+.contact {
+    padding-top: 20px;
+
+    .social i {
+        margin-right: 2%;
+
+        @media (max-width: 780px) {
+            display: none;
+        }
+    }
+
+    .item {
+        margin-right: 5%;
+
+        i {
+            @media (max-width: 780px) {
+                display: none;
+            }
+        }
+    }
+}
+
+hr {
+    box-shadow: 10px 1px 2px #888888;
+}
+
+// header
+.header {
+    .navbar {
+        margin-bottom: 30px;
+    }
+
+    li {
+        font-size: 15px;
+    }
+    .nav-link{
+        &:hover, &:focus, &:active {
+            color: $blue !important;
+          
+            }
+    }
+    .activee{
+        color:$blue !important  ; 
+       
+    }
+    .navbar-brand img {
+        width: 200px;
+        margin-bottom: 2px;
+    }
+
+
+    .carousel {
+        position: relative;
+        height: auto;
+
+        span {
+            border: 1px solid white;
+            padding: 22px;
+        }
+
+        .content {
+            position: absolute;
+            top: 41%;
+            left: 15%;
+            color: white;
+            z-index: 2;
+            width: 35%;
+            height: auto;
+
+            p {
+                @media (max-width: 820px) {
+                    display: none;
+                }
+            }
+
+            h1 {
+                @media (max-width: 720px) {
+                    font-size: 30px;
+                }
+            }
+
+            button {
+                @media (max-width: 720px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// about-us
+
+.about {
+    background-color: #f8f8f8;
+    padding: 100px 0px;
+    margin-bottom: 50px;
+
+    .row {
+        margin-bottom: 30px;
+    }
+
+    i {
+        font-size: 50px;
+    }
+
+    h3 {
+        color: $blue;
+    }
+
+    p {
+        padding: 10px;
+    }
+}
+
+// project
+
+.project {
+    padding: 50px;
+    margin-bottom: 100px;
+
+    h2 {
+        color: $blue;
+
+        @extend %line;
+
+        margin-bottom: 20px;
+    }
+
+    i {
+        display: none;
+    }
+
+    .owl-nav {
+        margin-left: 95%;
+    }
+
+    .owl-nav span {
+        font-size: 20px;
+        color: #ffff;
+        background-color: #25A8F0;
+        padding: 0px 5px;
+    }
+
+    .owl-dots {
+        display: none;
+    }
+
+    .item:hover {
+        position: relative;
+        cursor: pointer;
+        background-color: rgb(73, 191, 238);
+        background-blend-mode: overlay;
+
+        i {
+            display: block;
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            color: $white;
+            font-size: 30px;
+        }
+    }
+
+    .item img:hover {
+        opacity: 0.5;
+    }
+}
+
+// testmonial
+
+.testmonial {
+    background-color: $blue;
+    padding: 50px;
+    color: $white;
+    margin-bottom: 100px;
+
+   
+
+    h4 {
+        font-weight: unset;
+    }
+
+}
+
+// blog
+
+.blog {
+    margin-bottom: 100px;
+    padding: 50px;
+    margin-bottom: 100px;
+
+    h2 {
+        color: $blue;
+
+        @extend %line;
+
+        margin-bottom: 20px;
+    }
+
+    // .owl-stage {
+    //     width: 2400px !important;
+    // }
+
+    // .owl-item {
+    //     width: 550px !important;
+    // }
+
+    .owl-nav {
+        margin-left: 95%;
+
+        @media (max-width: 720px) {
+            display: none;
+        }
+    }
+
+    .owl-nav span {
+        font-size: 20px;
+        color: #ffff;
+        background-color: #25A8F0;
+        padding: 0px 5px;
+    }
+
+    .owl-dots {
+        display: none;
+    }
+
+    // .owl-nav {display: block !important ;}
+    .card img {
+        height: 100%;
+    }
+
+    small a {
+        float: right;
+        font-size: 15px;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+}
+
+// touch
+
+.touch {
+    background-color: $blue;
+    padding: 50px;
+    color: $white;
+
+    .help {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 20px;
+
+        @media (max-width: 720px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .get button {
+        color: $white;
+        border: 1px solid $white;
+    }
+}
+
+// FOOTER
+
+footer {
+    background-color: #161616;
+    padding: 50px;
+    color: $white;
+
+    h3 {
+        padding-bottom: 20px;
+        color: $blue;
+    }
+
+    ul {
+        padding: 0px;
+    }
+
+    ul li {
+        list-style: none;
+        text-align: left;
+        display: $inline;
+    }
+
+    i {
+        color: $blue;
+        margin-right: 10px;
+    }
+}
+
+// copy
+
+.copy {
+    padding: 30px;
+    background-color: #000000;
+    color: $white;
+
+    span {
+        color: red;
+    }
+}

@@ -1,0 +1,30 @@
+// vendors
+$vendors: "-moz-", "-webkit-", "-o-", "-ms-", ""; 
+
+// colors
+$gradientStartColor: #bc2bff;;
+$gradientEndColor: #7249fb;;
+$blue:#25A8F0; 
+$white:#ffff; 
+$black:#0000 ;
+$grey :rgb(100, 98, 98); 
+$shadow:rgba(0, 0, 0, 0.08); 
+
+//fonts
+$robotoFont: 'Roboto', sans-serif;
+$openSansFont: 'Open Sans', sans-serif;
+
+//images
+$bg-img:'../img/banner/home-banner.jpg';
+$logo : '../img/logo.png';
+$mobileImg:"../img/banner/right-mobile.png" ;
+$banner:"../img/banner/banner.jpg";
+// layout 
+$inline:inline-block ; 
+$autoM :0 auto; 
+$lignC:center ;
+$lightGreyBgColor:#f8f8f8;
+$primaryIconColor:#95e1d3;
+$sectionPadding:120px 0px;
+
+// -webkit-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);

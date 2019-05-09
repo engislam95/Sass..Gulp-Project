@@ -1,0 +1,117 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.416px;
+  height: 2000px; }
+
+.contact {
+  padding-top: 20px; }
+  .contact .social i {
+    margin-right: 2%; }
+    @media (max-width: 780px) {
+      .contact .social i {
+        display: none; } }
+  .contact .item {
+    margin-right: 5%; }
+    @media (max-width: 780px) {
+      .contact .item i {
+        display: none; } }
+
+hr {
+  box-shadow: 10px 1px 2px #888888; }
+
+.header .navbar {
+  margin-bottom: 30px; }
+
+.header li {
+  font-size: 15px; }
+
+.header .navbar-brand img {
+  width: 200px;
+  margin-bottom: 2px; }
+
+.header .tags {
+  background-color: #25A8F0;
+  margin-bottom: 80px;
+  height: 80px;
+  padding: 20px;
+  color: #ffff; }
+  .header .tags h2 {
+    display: inline-block; }
+  .header .tags h5 {
+    display: inline-block;
+    padding: 10px; }
+
+.blog-post {
+  margin-bottom: 100px; }
+  .blog-post .blog .card {
+    border-style: none;
+    position: relative; }
+  .blog-post .blog .date {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: #25A8F0;
+    color: #ffff;
+    padding: 10px;
+    top: 50%; }
+    @media (max-width: 780px) {
+      .blog-post .blog .date {
+        top: 40%; } }
+  .blog-post .blog a {
+    float: right; }
+  .blog-post .post .recent img {
+    width: 100%; }
+  .blog-post .post .latest img {
+    width: 100%; }
+  .blog-post .post .category {
+    padding: 0px; }
+  .blog-post .post .category li {
+    list-style: none;
+    font-size: 15px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    display: inline-block; }
+  .blog-post .post .category i {
+    color: #25A8F0;
+    padding-right: 5px; }
+
+.touch {
+  background-color: #25A8F0;
+  padding: 50px;
+  color: #ffff; }
+  .touch .help {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px; }
+    @media (max-width: 720px) {
+      .touch .help {
+        grid-template-columns: 1fr; } }
+  .touch .get button {
+    color: #ffff;
+    border: 1px solid #ffff; }
+
+footer {
+  background-color: #161616;
+  padding: 50px;
+  color: #ffff; }
+  footer h3 {
+    padding-bottom: 20px;
+    color: #25A8F0; }
+  footer ul {
+    padding: 0px; }
+  footer ul li {
+    list-style: none;
+    text-align: left;
+    display: inline-block; }
+  footer i {
+    color: #25A8F0;
+    margin-right: 10px; }
+
+.copy {
+  padding: 30px;
+  background-color: #000000;
+  color: #ffff; }
+  .copy span {
+    color: red; }

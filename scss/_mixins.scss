@@ -1,0 +1,178 @@
+
+@mixin typoStyle($font, $size:14px, $weight:400){
+	font-family: $font;
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $size * 1.618;
+}
+@mixin background-image($filePath,$h, $bgReapeat:no-repeat, $bgSize:cover, $bgAttachment:fixed) {
+  background-image: url($filePath);
+  height: $h;
+  background-repeat: $bgReapeat;
+  background-size: $bgSize;
+  background-attachment: $bgAttachment;
+}
+@mixin linear-gradient($deg, $start, $end) 
+{ 
+    background: -webkit-linear-gradient($deg, $start 0%, $end 100%);
+    background: -moz-linear-gradient($deg, $start 0%, $end 100%);
+    background: -o-linear-gradient($deg, $start 0%, $end 100%);
+    background: linear-gradient($deg, $start 0%, $end 100%);  
+}
+
+
+@mixin rounded($radius: 0.5em) 
+{
+    @each $vendor in $vendors
+     {
+          #{$vendor}border-radius: $radius;
+      }
+}
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+    @if $inset {
+    @each $vendor in $vendors {
+            #{$vendor}box-shadow: inset $top $left $blur $spread $color;
+        }
+    } @else {
+    @each $vendor in $vendors {
+            #{$vendor}box-shadow: $top $left $blur $spread $color;
+        }
+}
+}
+%head
+{
+    text-align: $lignC ; margin-bottom: 80px;
+    h2{@extend %largeOpenSans; padding-bottom: 50px !important;  @extend %line; }
+    p{@extend %regularRoboto; color:$grey; padding-bottom: 50px;  }
+    
+}
+%line
+{
+    &::after
+    {
+        content: "" ;
+        display: block ; 
+        background-color: $blue; 
+        width: 5%; 
+        height: 3px;
+        margin-top: 20px; 
+    }
+}
+%line-t
+{
+    &::after
+    {
+        content: "";
+        display: block;
+        background-color: #ffff; 
+        height: 2px;
+        margin-top: 3%;
+    }
+}
+%line-a
+{
+    &::after
+    {
+        content: "";
+        display: block;
+        background-color: #ffff;  
+        height: 2px;
+        margin-right: 43%;
+        margin-top: 3%;
+    }
+}
+
+%linee
+{
+    &::after
+    {
+        content: "" ;
+        display: block ; 
+        background-color: white; 
+        width: 5%; 
+        height: 3px;
+        margin: $autoM ;
+        margin-top: 20px; 
+    }
+}
+%border-app
+{
+    display: inline-block;
+    border: 1px solid #eeeeee;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: 16px;
+    @include rounded(5px);
+    &:hover{
+        cursor: pointer;
+        @include box-shadow(0px ,10px ,30px ,0px ,$shadow) ;
+        @include linear-gradient(0deg, $white 0%, $white 100%) ;
+        color:black ;
+        i{  @include linear-gradient(0deg, #bc2bff 0%, #7249fb 100%) ; -webkit-background-clip: text;
+            color:transparent ;}
+    }
+
+}
+%btn
+{
+    padding: 0px 45px;
+    line-height: 50px !important ;
+    background: $white;
+    color: #222222;
+    display: $inline;
+    @include rounded(5px);
+    @include typoStyle($openSansFont);
+
+    &:hover
+    {
+    cursor: pointer;
+    @include box-shadow(0px ,10px ,30px ,0px ,$shadow) ;	
+	}
+}
+%btn-bt
+{
+    padding: 0px 45px;
+    line-height: 50px !important ;
+    background: $white;
+    color: #222222;
+    border:2px solid #F1F1F1;
+    display: $inline;
+    @include rounded(5px);
+    @include typoStyle($openSansFont);
+
+    &:hover
+    {
+    cursor: pointer;
+    @include box-shadow(0px ,10px ,30px ,0px ,$shadow) ;
+    @include linear-gradient(0deg, #bc2bff 0%, #7249fb 100%) ;
+    color:$white;}	
+    
+}
+%card
+{
+    padding: 0px 30px;
+    line-height: 30px !important ;
+    background: $white;
+    color: #222222;
+    border:1px solid #D8D8D8;
+    display: $inline;
+    @include rounded(5px);
+    @include typoStyle($openSansFont);
+}
+%regularRoboto{
+	@include typoStyle($robotoFont, 16px, 400);
+}
+%mediumRoboto{
+	@include typoStyle($robotoFont, 20px, 500);
+}
+%regularOpenSans{
+	@include typoStyle($openSansFont, 16px, 400);
+}
+%mediumOpenSans{
+	@include typoStyle($openSansFont, 20px, 600);
+}
+%largeOpenSans{
+	@include typoStyle($openSansFont, 30px, 600);
+}

@@ -1,0 +1,208 @@
+body {
+    @include typoStyle($robotoFont, 12px);
+
+   
+}
+
+// contact
+.contact {
+    padding-top: 20px;
+
+    .social i {
+        margin-right: 2%;
+
+        @media (max-width: 780px) {
+            display: none;
+        }
+    }
+
+    .item {
+        margin-right: 5%;
+
+        i {
+            @media (max-width: 780px) {
+                display: none;
+            }
+        }
+    }
+}
+
+hr {
+    box-shadow: 10px 1px 2px #888888;
+}
+
+// header
+.header {
+  
+
+    li {
+        font-size: 15px;
+    }
+    .activee{
+        color:$blue !important  ; 
+        &:hover, &:focus, &:active {
+        color: $blue;
+      
+        }
+    }
+    .navbar-brand img {
+        width: 200px;
+        margin-bottom: 2px;
+    }
+
+    .tags {
+        background-color: $blue;
+        margin-bottom: 80px;
+        height: 80px;
+        padding: 20px;
+        color: $white;
+
+        h2 {
+            display: $inline;
+            // float: left;
+        }
+
+        h5 {
+            display: $inline;
+            // float: right;
+            padding: 10px;
+        }
+    }
+}
+
+// blog-post
+
+.blog-post {
+    margin-bottom: 100px;
+
+    .blog {
+        
+       
+        .carouselExampleFade .ar{
+            top: 99%;
+            background-color: #007bff;
+            left: 91%;
+            width: 3%;
+            position: absolute;
+        }
+       .arr
+        {
+            top: 99%;
+            background-color: #007bff;
+            left: 95%;
+            width: 3%;
+            position: absolute;
+        }
+       
+        .card {
+            border-style: none;
+            position: relative;
+        }
+
+        .date {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            background-color: $blue;
+            color: $white;
+            padding: 10px;
+            top: 50%;
+
+            @media (max-width: 780px) {
+                top: 40%;
+            }
+        }
+
+       
+    }
+
+    .post {
+        .recent img {
+            width: 100%;
+        }
+
+        .latest img {
+            width: 100%;
+        }
+
+        .category {
+            padding: 0px;
+        }
+
+        .category li {
+            list-style: none;
+            font-size: 15px;
+            padding-bottom: 10px;
+            font-weight: bold;
+            display: $inline;
+        }
+
+        .category i {
+            color: $blue;
+            padding-right: 5px;
+        }
+    }
+}
+
+// touch
+
+.touch {
+    background-color: $blue;
+    padding: 50px;
+    color: $white;
+
+    .help {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 20px;
+
+        @media (max-width: 720px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .get button {
+        color: $white;
+        border: 1px solid $white;
+    }
+}
+
+// FOOTER
+
+footer {
+    background-color: #161616;
+    padding: 50px;
+    color: $white;
+
+    h3 {
+        padding-bottom: 20px;
+        color: $blue;
+    }
+
+    ul {
+        padding: 0px;
+    }
+
+    ul li {
+        list-style: none;
+        text-align: left;
+        display: $inline;
+    }
+
+    i {
+        color: $blue;
+        margin-right: 10px;
+    }
+}
+
+// copy
+
+.copy {
+    padding: 30px;
+    background-color: #000000;
+    color: $white;
+
+    span {
+        color: red;
+    }
+}
